@@ -1,0 +1,13 @@
+n=int(input("enter no. of emails: "))
+lst=[]
+for i in range(0,n):
+    x=input("enter your email: ")
+    lst.append(x)
+for i in lst:
+    a=0
+    for j in range(0,len(i)):
+        if(i[j]=="@"):
+            a=j-1
+            print("username:",i[0:a+1]," and ",end="")
+            print("domain: ",i[a+2:].upper())
+            break
